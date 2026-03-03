@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "package": "me.kall.immersiveforests.mixin",
+  "plugin": "me.kall.immersiveforests.mixin.MixinExtrasInitializer",
+  "compatibilityLevel": "JAVA_8",
+  "overwrites": {
+    "conformVisibility": false
+  },
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "ChunkStatusMixin",
+    "FoliagePlacerMixin",
+    "LeavesBlockMixin",
+    "TreeFeatureMixin",
+    "TrunkPlacerMixin",
+    "WorldGenRegionMixin",
+    "compat.AcceleratedDecayMixin",
+    "decay.BlockStatePropertiesMixin",
+    "decay.IntegerPropertyAccessor",
+    "decay.LeavesBlockMixin"
+  ],
+  "client": [
+  ]
+}
