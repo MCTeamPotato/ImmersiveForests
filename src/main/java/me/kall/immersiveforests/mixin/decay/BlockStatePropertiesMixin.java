@@ -4,10 +4,7 @@ import me.kall.immersiveforests.ImmersiveForests;
 import me.kall.immersiveforests.TreeBonusConfig;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Mutable;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -19,10 +16,16 @@ public abstract class BlockStatePropertiesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void enhancedTrees$init(CallbackInfo ci) {
-        int oldMax = ((IntegerPropertyAccessor) DISTANCE).max();
+        IntegerPropertyAccessor propertySetter = immersiveForests$getDist();
+        int oldMax = propertySetter.max();
         int newMax = (int) (TreeBonusConfig.FOLIAGE_DECAY_RANGE_BONUS * (double) oldMax);
-        DISTANCE = IntegerProperty.create("distance", ((IntegerPropertyAccessor) DISTANCE).min(), newMax);
+        DISTANCE = IntegerProperty.create("distance", propertySetter.min(), newMax);
         MAX_DISTANCE = newMax;
         ImmersiveForests.LOGGER.info("Max value of BlockStateProperties DISTANCE is updated from {} to {}", oldMax, newMax);
+    }
+
+    @Unique
+    private static IntegerPropertyAccessor immersiveForests$getDist() {
+        return (IntegerPropertyAccessor) (Object) DISTANCE;
     }
 }

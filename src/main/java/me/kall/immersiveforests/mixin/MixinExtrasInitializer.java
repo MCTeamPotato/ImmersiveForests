@@ -1,6 +1,6 @@
 package me.kall.immersiveforests.mixin;
 
-import net.neoforged.fml.loading.LoadingModList;
+import net.neoforged.fml.loading.FMLLoader;
 import org.jetbrains.annotations.NotNull;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
@@ -26,7 +26,7 @@ public class MixinExtrasInitializer implements IMixinConfigPlugin {
     }
 
     private static boolean isLoaded(String mod) {
-        return LoadingModList.get().getModFileById(mod) != null;
+        return FMLLoader.getCurrent().getLoadingModList().getModFileById(mod) != null;
     }
 
     @Override
