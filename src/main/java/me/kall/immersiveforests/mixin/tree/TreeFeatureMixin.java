@@ -1,4 +1,4 @@
-package me.kall.immersiveforests.mixin;
+package me.kall.immersiveforests.mixin.tree;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

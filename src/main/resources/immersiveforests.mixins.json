@@ -11,12 +11,11 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "ChunkStatusMixin",
-    "FoliagePlacerMixin",
-    "LeavesBlockMixin",
-    "TreeFeatureMixin",
-    "TrunkPlacerMixin",
-    "WorldGenRegionMixin",
+    "tree.ChunkStatusMixin",
+    "tree.FoliagePlacerMixin",
+    "tree.LeavesBlockMixin",
+    "tree.TreeFeatureMixin",
+    "tree.TrunkPlacerMixin",
     "compat.AcceleratedDecayMixin",
     "decay.BlockStatePropertiesMixin",
     "decay.IntegerPropertyAccessor",

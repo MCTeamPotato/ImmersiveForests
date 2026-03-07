@@ -1,4 +1,4 @@
-package me.kall.immersiveforests.mixin;
+package me.kall.immersiveforests.mixin.tree;
 
 import me.kall.immersiveforests.TreeBonusConfig;
 import net.minecraft.util.Mth;
