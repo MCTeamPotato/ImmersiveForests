@@ -13,6 +13,6 @@ public abstract class ChunkStatusMixin {
     @Dynamic
     @ModifyConstant(method = {"method_51375", "lambda$static$11", "m_279978_"}, constant = @Constant(intValue = 1))
     private static int modifyWriteRadiusCutoff(int writeRadiusCutoff) {
-        return Mth.ceil(TreeBonusConfig.FOLIAGE_XZ_BONUS * (double) writeRadiusCutoff);
+        return Math.min(Mth.ceil(TreeBonusConfig.FOLIAGE_XZ_BONUS * (double) writeRadiusCutoff), 8);
     }
 }

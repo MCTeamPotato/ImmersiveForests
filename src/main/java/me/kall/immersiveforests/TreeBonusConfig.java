@@ -3,11 +3,11 @@ package me.kall.immersiveforests;
 import me.kall.duplicationless.config.JsonConfig;
 
 public class TreeBonusConfig {
-    private static final JsonConfig CONFIG = JsonConfig.create(ImmersiveForests.MOD_ID, "3")
-            .put("TrunkBonus", 4.000)
-            .put("FoliageHorizontalBonus", 2.000)
-            .put("FoliageVerticalBonus", 2.000)
-            .put("FoliageDecayRangeBonus", 2.000)
+    private static final JsonConfig CONFIG = JsonConfig.create(ImmersiveForests.MOD_ID, "1")
+            .put("TrunkBonus", 2.0)
+            .put("FoliageHorizontalBonus", 1.5)
+            .put("FoliageVerticalBonus", 1.5)
+            .put("FoliageDecayRangeBonus", 1.5)
             .put("LeavesNoLongerBlockLight", false)
             .initialize();
 
