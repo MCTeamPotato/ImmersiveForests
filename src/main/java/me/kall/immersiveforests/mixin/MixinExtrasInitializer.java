@@ -1,7 +1,6 @@
 package me.kall.immersiveforests.mixin;
 
-import com.llamalad7.mixinextras.MixinExtrasBootstrap;
-import net.minecraftforge.fml.loading.LoadingModList;
+import net.neoforged.fml.loading.LoadingModList;
 import org.jetbrains.annotations.NotNull;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
@@ -13,9 +12,7 @@ import java.util.Set;
 
 public class MixinExtrasInitializer implements IMixinConfigPlugin {
     @Override
-    public void onLoad(String mixinPackage) {
-        MixinExtrasBootstrap.init();
-    }
+    public void onLoad(String mixinPackage) {}
 
     @Override
     public String getRefMapperConfig() {
