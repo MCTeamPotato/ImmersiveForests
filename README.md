@@ -6,8 +6,8 @@
 
 By default, all naturally generated trees are significantly larger than vanilla:
 
-- **Taller trunks** — tree trunks grow about 4× taller, making forests feel genuinely towering
-- **Wider canopies** — foliage spreads roughly 2× further horizontally, creating dense, lush treetops
+- **Taller trunks** — tree trunks grow about 2× taller, making forests feel genuinely towering
+- **Wider canopies** — foliage spreads roughly 1.5× further horizontally, creating dense, lush treetops
 - **Fuller crowns** — leaf layers extend higher vertically as well, for a rounder, more natural silhouette
 - **Extended leaf decay** — when a tree is cut down, leaves decay over a wider range to match the larger canopy size
 
@@ -29,13 +29,14 @@ The config file immersiveforests.json is generated on first launch and lets you 
 
 | Option                      | Default | Description                      |
 |-----------------------------|---------|----------------------------------|
-| `TrunkBonus`                | 4.0     | Trunk height multiplier          |
-| `FoliageHorizontalBonus`    | 2.0     | Canopy width multiplier          |
-| `FoliageVerticalBonus`      | 2.0     | Canopy height multiplier         |
-| `FoliageDecayRangeBonus`    | 2.0     | Leaf decay distance multiplier   |
+| `TrunkBonus`                | 2.0     | Trunk height multiplier          |
+| `FoliageHorizontalBonus`    | 1.5     | Canopy width multiplier          |
+| `FoliageVerticalBonus`      | 1.5     | Canopy height multiplier         |
+| `FoliageDecayRangeBonus`    | 1.5     | Leaf decay distance multiplier   |
 | `LeavesNoLongerBlockLight`  | false   | Make leaves transparent to light |
 
 ## Note
-The extension may cause unexpected behaviors with mods that make leaf decay faster. 
+- The extension may cause unexpected behaviors with mods that make leaf decay faster.
+- You won't want to set TrunkBonus too high, as that will make the spruce trees look really hideous.
 
 Accelerated Decay compatibility is already built-in. If you find issues with other mods, feel free to leave a note [here](https://github.com/MCTeamPotato/ImmersiveForests/issues).
