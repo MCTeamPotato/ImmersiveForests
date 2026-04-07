@@ -19,7 +19,6 @@
     "tree.FoliagePlacerMixin$UniformIntAccessor",
     "tree.LeavesBlockMixin",
     "tree.TreeFeatureMixin",
-    "tree.TrunkPlacerMixin",
-    "tree.FoliagePlacerMixin.UniformIntAccessor"
+    "tree.TrunkPlacerMixin"
   ]
 }
